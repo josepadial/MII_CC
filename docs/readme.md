@@ -1,5 +1,10 @@
-Los hitos para la realización del proyecto son los siguientes:
+# Documentación
+Índice:
+<!-- TOC -->
+* [Los hitos para la realización del proyecto son los siguientes:](#los-hitos-para-la-realizacin-del-proyecto-son-los-siguientes-)
+<!-- TOC -->
 
+## Los hitos para la realización del proyecto son los siguientes:
 * [Hito 0: Descripción del problema a resolver usando correctamente git y GitHub](./hito_0/README.md).
 * [Hito 1: Concretando y planificando el proyecto](./hito_1/README.md).
 * [Hito 2: Tests](./hito_2/README.md).
