@@ -1,9 +1,9 @@
 # Hito 0: Descripción del problema a resolver usando correctamente git y GitHub
 Índice:
 <!-- TOC -->
-* [Creación de la cuenta de GitHub](#creacin-de-la-cuenta-de-github)
+* [Creación de la cuenta de GitHub](#creación-de-la-cuenta-de-github)
 * [Seguridad de la cuenta de GitHub](#seguridad-de-la-cuenta-de-github)
-* [Creación del repositorio](#creacin-del-repositorio)
+* [Creación del repositorio](#creación-del-repositorio)
 * [Git en local](#git-en-local)
 <!-- TOC -->
 

@@ -1,7 +1,7 @@
 # Documentación
 Índice:
 <!-- TOC -->
-* [Los hitos para la realización del proyecto son los siguientes:](#los-hitos-para-la-realizacin-del-proyecto-son-los-siguientes-)
+* [Los hitos para la realización del proyecto son los siguientes:](#los-hitos-para-la-realización-del-proyecto-son-los-siguientes-)
 <!-- TOC -->
 
 ## Los hitos para la realización del proyecto son los siguientes:
