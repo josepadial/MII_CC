@@ -11,7 +11,7 @@
 No ha sido necesario la creación de una nueva cuenta de GitHub porque se va a utilizar mi cuenta actual.
 La cual ya esta previamente configurada como cuenta estudiante de la UGR.
 
-![](../../img/Overview_GitHub.png)
+![](../img/Overview_GitHub.png)
 
 ## Seguridad de la cuenta de GitHub
 Están configurados los sigueintes métodos de seguridad:
@@ -31,5 +31,5 @@ desarrollar este proyecto. Voy a utilizar el IDE, de JetBarains, PyCharm Profess
 para el proyecto. Este IDE proporcina un plugin para GitHub. Todas las interacciones con Git
 se van a realizar desde el IDE.
 
-![](../../img/Folder_GitHub.png)
-![](../../img/Logs_GitHub.png)
+![](../img/Folder_GitHub.png)
+![](../img/Logs_GitHub.png)
