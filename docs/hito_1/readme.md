@@ -37,8 +37,8 @@ Enlace al fichero [cc.yaml](../../cc.yaml)
 En la carpeta DATA se tiene dos ficheros JSON con datos reales de las incidencias y cambios de
 la instancia EU48 de Salesforce. Con la [US1](https://github.com/josepadial/MII_CC/issues/2) se va
 a conseguir actualizar esos ficheros en cada ejecución de forma automática.
-- [Incidencias](../../src/data/incidencias.json)
-- [Cambios](../../src/data/cambios.json)
+- [Incidencias](../../data/incidencias.json)
+- [Cambios](../../data/cambios.json)
 
 ## Manual de ejecución
 Para ejecutar el proyecto previamente debemos de tener Python 3.8 instalado en nuestro sistema.
