@@ -31,7 +31,7 @@ Enlace al fichero [cc.yaml](../../cc.yaml)
 - Carpetas principales:
   - Para almacenar toda la información [data](../../data).
   - Código [source](../../src).
-  - Librería para el proyecto [vendor](../../src/vendor)
+  - Librería para el proyecto [vendor](../../src/vendor).
 
 ## JSON de ejemplo
 En la carpeta DATA se tiene dos ficheros JSON con datos reales de las incidencias y cambios de
