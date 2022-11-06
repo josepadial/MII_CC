@@ -23,6 +23,15 @@ forma de una clase, módulo o paquete que es el objeto de este hito, con el cami
 Enlace al fichero [cc.yaml](../../cc.yaml)
 
 ## Código
+- Ficheros principales:
+  - Clase principal [main.py](../../src/main.py)
+  - Variables de entorno [envfile.env](../../src/envfile.env)
+  - Requirements [requirements.txt](../../src/requirements.txt)
+  - Set up del entorno virtual de Python [venv-setup.sh](../../src/venv-setup.sh)
+- Carpetas principales:
+  - Para almacenar toda la información [data](../../data)
+  - Código [source](../../src)
+  - Librería para el proyecto [vendor](../../src/vendor)
 
 ## JSON de ejemplo
 En la carpeta DATA se tiene dos ficheros JSON con datos reales de las incidencias y cambios de
@@ -32,3 +41,15 @@ a conseguir actualizar esos ficheros en cada ejecución de forma automática.
 - [Cambios](../../src/data/cambios.json)
 
 ## Manual de ejecución
+Para ejecutar el proyecto previamente debemos de tener Python 3.8 instalado en nuestro sistema.
+Después, procedemos a ejecutar el fichero [venv-setup.sh](../../src/venv-setup.sh); el cual procederá
+a crearnos un entorno virtual de Python exclusivo para este proyecto en cuál ya estarán instalados
+todos los requirments y librerías. Una vez configurado seleccionamos el intérprete de Python y 
+ejecutamos el fichero [main.py](../../src/main.py). 
+
+Los pasos anteriores nos van a crear un servidor Flsk que escucha en "localhost:8080". En el fichero
+[main.py](../../src/main.py) se pueden encontrar las diferentes acciones que se han implementado.
+Para este hito 1 solo se ha implementado un POST, obtener los datos de la API y guardarlos en un JSON.
+Al realizar un POST a "http://127.0.0.1:8080/update_data" podemos obtener:
+- "SUCCESS": en el caso de que no haya habido ningún fallo de ejecución.
+- "FAILED": en el caso de que suceda cuando si hay un fallo de ejecución, el cual viene acompañado de un mensaje de error.
