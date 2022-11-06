@@ -24,14 +24,14 @@ Enlace al fichero [cc.yaml](../../cc.yaml)
 
 ## Código
 - Ficheros principales:
-  - Clase principal [main.py](../../src/main.py)
-  - Variables de entorno [envfile.env](../../src/envfile.env)
-  - Requirements [requirements.txt](../../src/requirements.txt)
-  - Set up del entorno virtual de Python [venv-setup.sh](../../src/venv-setup.sh)
+  - Clase principal [main.py](../../src/main.py).
+  - Variables de entorno [envfile.env](../../src/envfile.env).
+  - Requirements [requirements.txt](../../src/requirements.txt).
+  - Set up del entorno virtual de Python [venv-setup.sh](../../src/venv-setup.sh).
 - Carpetas principales:
-  - Para almacenar toda la información [data](../../data)
-  - Código [source](../../src)
-  - Librería para el proyecto [vendor](../../src/vendor)
+  - Para almacenar toda la información [data](../../data).
+  - Código [source](../../src).
+  - Librería para el proyecto [vendor](../../src/vendor).
 
 ## JSON de ejemplo
 En la carpeta DATA se tiene dos ficheros JSON con datos reales de las incidencias y cambios de
