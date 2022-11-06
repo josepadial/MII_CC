@@ -1,134 +1,134 @@
 [
-  {
-    "id": 10012,
-    "externalId": "46078595",
-    "message": {
-      "pathToResolution": null,
-      "actionPlan": null,
-      "rootCause": null
+    {
+        "id": 10012,
+        "externalId": "46078595",
+        "message": {
+            "pathToResolution": null,
+            "actionPlan": null,
+            "rootCause": null
+        },
+        "additionalInformation": "",
+        "isCore": false,
+        "affectsAll": false,
+        "createdAt": "2022-10-04T13:01:42.308Z",
+        "updatedAt": "2022-10-04T13:06:45.369Z",
+        "IncidentImpacts": [
+            {
+                "id": 10907,
+                "startTime": "2022-10-04T12:31:00.000Z",
+                "endTime": "2022-10-04T12:37:00.000Z",
+                "type": "slowDataProcessing",
+                "severity": "minor",
+                "createdAt": "2022-10-04T13:01:42.405Z",
+                "updatedAt": "2022-10-04T13:06:45.518Z",
+                "startTimeCreatedAt": "2022-10-04T13:01:42.406Z",
+                "startTimeModifiedAt": null,
+                "endTimeCreatedAt": "2022-10-04T13:06:45.518Z",
+                "endTimeModifiedAt": null,
+                "label": "El procesamiento de datos con degradaci\u00f3n del rendimiento es m\u00e1s lento del habitual.",
+                "text": "Hay una degradaci\u00f3n del rendimiento del servicio de Salesforce donde algunos usuarios pueden sufrir un procesamiento de datos demorado. Durante dicha demora, sus datos se ponen en cola hasta que el sistema tenga los recursos suficientes para escribirlos en la base de datos. Puede introducir los datos en los sistemas que los originan, y se almacenan en Salesforce, pero puede producirse una demora antes de que aparezcan (o los vea) en su organizaci\u00f3n de Salesforce. Estamos investigando el problema y se proporcionar\u00e1 una actualizaci\u00f3n en 30 minutos o antes si tenemos m\u00e1s informaci\u00f3n."
+            }
+        ],
+        "IncidentEvents": [
+            {
+                "id": 8226,
+                "type": "investigatingCauseNewEngineers",
+                "message": "We are continuing to investigate the cause of this issue and have engaged additional engineers.",
+                "createdAt": "2022-10-04T13:01:42.406Z",
+                "updatedAt": "2022-10-04T13:01:42.406Z",
+                "label": "Investigando"
+            }
+        ],
+        "instanceKeys": [
+            "EU48"
+        ],
+        "serviceKeys": [
+            "coreService"
+        ]
     },
-    "additionalInformation": "",
-    "isCore": false,
-    "affectsAll": false,
-    "createdAt": "2022-10-04T13:01:42.308Z",
-    "updatedAt": "2022-10-04T13:06:45.369Z",
-    "IncidentImpacts": [
-      {
-        "id": 10907,
-        "startTime": "2022-10-04T12:31:00.000Z",
-        "endTime": "2022-10-04T12:37:00.000Z",
-        "type": "slowDataProcessing",
-        "severity": "minor",
-        "createdAt": "2022-10-04T13:01:42.405Z",
-        "updatedAt": "2022-10-04T13:06:45.518Z",
-        "startTimeCreatedAt": "2022-10-04T13:01:42.406Z",
-        "startTimeModifiedAt": null,
-        "endTimeCreatedAt": "2022-10-04T13:06:45.518Z",
-        "endTimeModifiedAt": null,
-        "label": "El procesamiento de datos con degradación del rendimiento es más lento del habitual.",
-        "text": "Hay una degradación del rendimiento del servicio de Salesforce donde algunos usuarios pueden sufrir un procesamiento de datos demorado. Durante dicha demora, sus datos se ponen en cola hasta que el sistema tenga los recursos suficientes para escribirlos en la base de datos. Puede introducir los datos en los sistemas que los originan, y se almacenan en Salesforce, pero puede producirse una demora antes de que aparezcan (o los vea) en su organización de Salesforce. Estamos investigando el problema y se proporcionará una actualización en 30 minutos o antes si tenemos más información."
-      }
-    ],
-    "IncidentEvents": [
-      {
-        "id": 8226,
-        "type": "investigatingCauseNewEngineers",
-        "message": "We are continuing to investigate the cause of this issue and have engaged additional engineers.",
-        "createdAt": "2022-10-04T13:01:42.406Z",
-        "updatedAt": "2022-10-04T13:01:42.406Z",
-        "label": "Investigando"
-      }
-    ],
-    "instanceKeys": [
-      "EU48"
-    ],
-    "serviceKeys": [
-      "coreService"
-    ]
-  },
-  {
-    "id": 10013,
-    "externalId": "46078716",
-    "message": {
-      "pathToResolution": null,
-      "actionPlan": null,
-      "rootCause": "appTierResourceContentionNoFault"
+    {
+        "id": 10013,
+        "externalId": "46078716",
+        "message": {
+            "pathToResolution": null,
+            "actionPlan": null,
+            "rootCause": "appTierResourceContentionNoFault"
+        },
+        "additionalInformation": "",
+        "isCore": false,
+        "affectsAll": false,
+        "createdAt": "2022-10-04T13:13:44.250Z",
+        "updatedAt": "2022-10-04T13:46:23.529Z",
+        "IncidentImpacts": [
+            {
+                "id": 10908,
+                "startTime": "2022-10-04T12:31:00.000Z",
+                "endTime": "2022-10-04T13:18:00.000Z",
+                "type": "pageLoadDelays",
+                "severity": "minor",
+                "createdAt": "2022-10-04T13:13:44.341Z",
+                "updatedAt": "2022-10-04T13:46:23.605Z",
+                "startTimeCreatedAt": "2022-10-04T13:13:44.341Z",
+                "startTimeModifiedAt": null,
+                "endTimeCreatedAt": "2022-10-04T13:25:26.201Z",
+                "endTimeModifiedAt": "2022-10-04T13:46:23.605Z",
+                "label": "Demoras en la carga de p\u00e1ginas con degradaci\u00f3n del rendimiento",
+                "text": "Hay una degradaci\u00f3n del rendimiento del servicio de Salesforce donde algunos usuarios sufren demoras en la carga de p\u00e1ginas. Durante las demoras de carga de p\u00e1ginas, la latencia de red afecta a la infraestructura de nube. Se pueden producir tiempos de carga lentos y errores de agotamiento de tiempo de espera ocasionales. Estamos investigando el problema y se proporcionar\u00e1 una actualizaci\u00f3n en 30 minutos o antes si tenemos m\u00e1s informaci\u00f3n."
+            }
+        ],
+        "IncidentEvents": [],
+        "instanceKeys": [
+            "EU48"
+        ],
+        "serviceKeys": [
+            "coreService"
+        ]
     },
-    "additionalInformation": "",
-    "isCore": false,
-    "affectsAll": false,
-    "createdAt": "2022-10-04T13:13:44.250Z",
-    "updatedAt": "2022-10-04T13:46:23.529Z",
-    "IncidentImpacts": [
-      {
-        "id": 10908,
-        "startTime": "2022-10-04T12:31:00.000Z",
-        "endTime": "2022-10-04T13:18:00.000Z",
-        "type": "pageLoadDelays",
-        "severity": "minor",
-        "createdAt": "2022-10-04T13:13:44.341Z",
-        "updatedAt": "2022-10-04T13:46:23.605Z",
-        "startTimeCreatedAt": "2022-10-04T13:13:44.341Z",
-        "startTimeModifiedAt": null,
-        "endTimeCreatedAt": "2022-10-04T13:25:26.201Z",
-        "endTimeModifiedAt": "2022-10-04T13:46:23.605Z",
-        "label": "Demoras en la carga de páginas con degradación del rendimiento",
-        "text": "Hay una degradación del rendimiento del servicio de Salesforce donde algunos usuarios sufren demoras en la carga de páginas. Durante las demoras de carga de páginas, la latencia de red afecta a la infraestructura de nube. Se pueden producir tiempos de carga lentos y errores de agotamiento de tiempo de espera ocasionales. Estamos investigando el problema y se proporcionará una actualización en 30 minutos o antes si tenemos más información."
-      }
-    ],
-    "IncidentEvents": [],
-    "instanceKeys": [
-      "EU48"
-    ],
-    "serviceKeys": [
-      "coreService"
-    ]
-  },
-  {
-    "id": 10294,
-    "externalId": "47329183",
-    "message": {
-      "pathToResolution": null,
-      "actionPlan": null,
-      "rootCause": "Application Tier Release Issue"
-    },
-    "additionalInformation": "",
-    "isCore": false,
-    "affectsAll": false,
-    "createdAt": "2022-11-03T21:39:34.347Z",
-    "updatedAt": "2022-11-04T21:08:17.575Z",
-    "IncidentImpacts": [
-      {
-        "id": 11211,
-        "startTime": "2022-11-03T19:47:00.000Z",
-        "endTime": "2022-11-03T21:06:00.000Z",
-        "type": "featureServiceDisruption",
-        "severity": "minor",
-        "createdAt": "2022-11-03T21:39:34.409Z",
-        "updatedAt": "2022-11-03T21:39:34.409Z",
-        "startTimeCreatedAt": "2022-11-03T21:39:34.409Z",
-        "startTimeModifiedAt": null,
-        "endTimeCreatedAt": "2022-11-03T21:39:34.409Z",
-        "endTimeModifiedAt": null,
-        "label": "Interrupción de funciones",
-        "text": "Hay una interrupción de funciones del servicio de Salesforce. Durante una interrupción de funciones, los usuarios finales a veces no pueden acceder a ciertos aspectos del servicio. Estamos investigando el problema y se proporcionará una actualización en 30 minutos o antes si tenemos más información."
-      }
-    ],
-    "IncidentEvents": [
-      {
-        "id": 8493,
-        "type": "update",
-        "message": "At 19:47 UTC on November 3, 2022, the Salesforce Technology team became aware of a disruption with the Private Connect feature affecting multiple instances. \n\nThis disruption impacted the transfer of data transmitted over Private Connect including API calls to both inbound and outbound traffic within Salesforce data centers.\n\nThe Technology team determined that a recent change made to the environment had caused the incident. The team decided that rolling back that change was the best way to resolve the issue and that rollback was successfully completed at 21:06 UTC.",
-        "createdAt": "2022-11-04T21:08:17.724Z",
-        "updatedAt": "2022-11-04T21:08:17.732Z",
-        "label": "Actualizar"
-      }
-    ],
-    "instanceKeys": [
-      "EU48"
-    ],
-    "serviceKeys": [
-      "coreService"
-    ]
-  }
+    {
+        "id": 10294,
+        "externalId": "47329183",
+        "message": {
+            "pathToResolution": null,
+            "actionPlan": null,
+            "rootCause": "Application Tier Release Issue"
+        },
+        "additionalInformation": "",
+        "isCore": false,
+        "affectsAll": false,
+        "createdAt": "2022-11-03T21:39:34.347Z",
+        "updatedAt": "2022-11-04T21:08:17.575Z",
+        "IncidentImpacts": [
+            {
+                "id": 11211,
+                "startTime": "2022-11-03T19:47:00.000Z",
+                "endTime": "2022-11-03T21:06:00.000Z",
+                "type": "featureServiceDisruption",
+                "severity": "minor",
+                "createdAt": "2022-11-03T21:39:34.409Z",
+                "updatedAt": "2022-11-03T21:39:34.409Z",
+                "startTimeCreatedAt": "2022-11-03T21:39:34.409Z",
+                "startTimeModifiedAt": null,
+                "endTimeCreatedAt": "2022-11-03T21:39:34.409Z",
+                "endTimeModifiedAt": null,
+                "label": "Interrupci\u00f3n de funciones",
+                "text": "Hay una interrupci\u00f3n de funciones del servicio de Salesforce. Durante una interrupci\u00f3n de funciones, los usuarios finales a veces no pueden acceder a ciertos aspectos del servicio. Estamos investigando el problema y se proporcionar\u00e1 una actualizaci\u00f3n en 30 minutos o antes si tenemos m\u00e1s informaci\u00f3n."
+            }
+        ],
+        "IncidentEvents": [
+            {
+                "id": 8493,
+                "type": "update",
+                "message": "At 19:47 UTC on November 3, 2022, the Salesforce Technology team became aware of a disruption with the Private Connect feature affecting multiple instances. \n\nThis disruption impacted the transfer of data transmitted over Private Connect including API calls to both inbound and outbound traffic within Salesforce data centers.\n\nThe Technology team determined that a recent change made to the environment had caused the incident. The team decided that rolling back that change was the best way to resolve the issue and that rollback was successfully completed at 21:06 UTC.",
+                "createdAt": "2022-11-04T21:08:17.724Z",
+                "updatedAt": "2022-11-04T21:08:17.732Z",
+                "label": "Actualizar"
+            }
+        ],
+        "instanceKeys": [
+            "EU48"
+        ],
+        "serviceKeys": [
+            "coreService"
+        ]
+    }
 ]
