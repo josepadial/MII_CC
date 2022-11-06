@@ -13,10 +13,10 @@ def update_data():
     request_cambios = requests.get(url_cambios)
     try:
         with open(f"{filepath}incidencias.json", "w") as json_file:
-            json.dump(json.loads(request_incidencias.text), json_file, indent=4, separators=(',',': '))
+            json.dump(json.loads(request_incidencias.text), json_file, indent=2, separators=(',',': '))
             json_file.close()
         with open(f"{filepath}cambios.json", "w") as json_file:
-            json.dump(json.loads(request_cambios.text), json_file, indent=4, separators=(',',': '))
+            json.dump(json.loads(request_cambios.text), json_file, indent=2, separators=(',',': '))
             json_file.close()
         return {"status": "success"}
     except Exception as e:
