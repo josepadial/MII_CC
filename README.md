@@ -38,4 +38,4 @@ y modificada a nuestro estilo ser almacenada en una base de datos.
 Se implementa un servicio que realizando consultas REST nos retorne un JSON
 con la información solicitada.
 
-![](./img/idea_del_proyecto.png)
+![](docs/img/idea_del_proyecto.png)
