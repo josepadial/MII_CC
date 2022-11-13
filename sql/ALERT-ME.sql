@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: db
--- Tiempo de generación: 13-11-2022 a las 11:47:09
+-- Tiempo de generación: 13-11-2022 a las 19:44:20
 -- Versión del servidor: 8.0.31
 -- Versión de PHP: 8.0.19
 
@@ -29,18 +29,18 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `cambios` (
   `id` int NOT NULL,
-  `message` json DEFAULT NULL,
-  `externalId` varchar(12) DEFAULT NULL,
-  `name` varchar(1000) DEFAULT NULL,
-  `plannedStartTime` varchar(100) DEFAULT NULL,
-  `plannedEndTime` varchar(100) DEFAULT NULL,
-  `additionalInformation` varchar(8000) DEFAULT NULL,
+  `message` text,
+  `externalId` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `name_ch` varchar(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `plannedStartTime` datetime DEFAULT NULL,
+  `plannedEndTime` datetime DEFAULT NULL,
+  `additionalInformation` varchar(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `isCore` tinyint(1) DEFAULT NULL,
   `affectsAll` tinyint(1) DEFAULT NULL,
-  `createdAt` varchar(100) DEFAULT NULL,
-  `updatedAt` varchar(100) DEFAULT NULL,
-  `MaintenanceImpacts` json DEFAULT NULL,
-  `MaintenanceEvents` json DEFAULT NULL,
+  `createdAt` datetime DEFAULT NULL,
+  `updatedAt` datetime DEFAULT NULL,
+  `MaintenanceImpacts` text,
+  `MaintenanceEvents` text,
   `instanceKeys` varchar(500) DEFAULT NULL,
   `serviceKeys` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -53,17 +53,17 @@ CREATE TABLE `cambios` (
 
 CREATE TABLE `incidencias` (
   `id` int NOT NULL,
-  `externalId` varchar(12) DEFAULT NULL,
-  `message` json DEFAULT NULL,
-  `additionalInformation` varchar(8000) DEFAULT NULL,
+  `externalId` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `message` text,
+  `additionalInformation` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `isCore` tinyint(1) DEFAULT NULL,
   `affectsAll` tinyint(1) DEFAULT NULL,
-  `createdAt` varchar(100) DEFAULT NULL,
-  `updatedAt` varchar(100) DEFAULT NULL,
-  `IncidentImpacts` json DEFAULT NULL,
-  `IncidentEvents` json DEFAULT NULL,
-  `instanceKeys` varchar(500) DEFAULT NULL,
-  `serviceKeys` varchar(500) DEFAULT NULL
+  `createdAt` datetime DEFAULT NULL,
+  `updatedAt` datetime DEFAULT NULL,
+  `IncidentImpacts` text,
+  `IncidentEvents` text,
+  `instanceKeys` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `serviceKeys` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
