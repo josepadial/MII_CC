@@ -1,6 +1,9 @@
 import os
+from crypt import methods
 from flask import Flask
 import requests, json
+
+from MII_CC.db.db_manager import DatabaseManager
 
 app = Flask(__name__)
 url_incidencias = "https://api.status.salesforce.com/v1/incidents?instance=EU48&locale=es"
@@ -12,12 +15,23 @@ def update_data():
     request_incidencias = requests.get(url_incidencias)
     request_cambios = requests.get(url_cambios)
     try:
-        with open(f"{filepath}incidencias.json", "w") as json_file:
-            json.dump(json.loads(request_incidencias.text), json_file, indent=2, separators=(',',': '))
+        with open(f"{filepath}incidencias.json", "w+") as json_file:
+            json.dump(json.loads(request_incidencias.text), json_file, indent=4)
             json_file.close()
-        with open(f"{filepath}cambios.json", "w") as json_file:
-            json.dump(json.loads(request_cambios.text), json_file, indent=2, separators=(',',': '))
+        with open(f"{filepath}cambios.json", "w+") as json_file:
+            json.dump(json.loads(request_cambios.text), json_file, indent=4)
             json_file.close()
+        return {"status": "success"}
+    except Exception as e:
+        return {"status": "failed", "message": str(e)}
+
+@app.route("/connect_database", methods=["POST"])
+def connect_database():
+    try:
+        database = DatabaseManager()
+        database.cursor.execute("SHOW TABLES")
+        for table_name in database.cursor:
+            print(table_name)
         return {"status": "success"}
     except Exception as e:
         return {"status": "failed", "message": str(e)}
