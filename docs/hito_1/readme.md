@@ -27,7 +27,7 @@ Enlace al fichero [cc.yaml](../../cc.yaml)
   - Clase principal [main.py](../../src/main.py).
   - Variables de entorno [envfile.env](../../src/envfile.env).
   - Requirements [requirements.txt](../../src/requirements.txt).
-  - Set up del entorno virtual de Python [venv-setup.sh](../../src/venv-setup.sh).
+  - Set up del entorno virtual de Python [venv-setup.sh](../../install/venv-setup.sh).
 - Carpetas principales:
   - Para almacenar toda la información [data](../../data).
   - Código [source](../../src).
@@ -42,7 +42,7 @@ a conseguir actualizar esos ficheros en cada ejecución de forma automática.
 
 ## Manual de ejecución
 Para ejecutar el proyecto previamente debemos de tener Python 3.8 instalado en nuestro sistema.
-Después, procedemos a ejecutar el fichero [venv-setup.sh](../../src/venv-setup.sh); el cual procederá
+Después, procedemos a ejecutar el fichero [venv-setup.sh](../../install/venv-setup.sh); el cual procederá
 a crearnos un entorno virtual de Python exclusivo para este proyecto en cuál ya estarán instalados
 todos los requirments y librerías. Una vez configurado seleccionamos el intérprete de Python y 
 ejecutamos el fichero [main.py](../../src/main.py). 

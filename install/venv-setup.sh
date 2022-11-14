@@ -7,6 +7,6 @@ source ~/venv-cc/bin/activate
 echo "Instalando wheel"
 pip3 install wheel
 echo "Instalando librerías"
-pip install vendor/*.whl
+pip install ../src/vendor/*.whl
 echo "Instalando requirements"
-pip install -r requirements.txt
+pip install -r ../src/requirements.txt
