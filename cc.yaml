@@ -1,5 +1,8 @@
 entidad:
   - main.py
-
 lenguaje:
   - Python
+test:
+  - test/tests.py
+fichero_tareas:
+  - Makefile

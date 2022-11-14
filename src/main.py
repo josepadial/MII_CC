@@ -1,9 +1,10 @@
 import os
-from crypt import methods
+import sys
 from flask import Flask
 import requests, json
-
-from MII_CC.db.db_manager import DatabaseManager
+parent = os.path.abspath(os.path.join(os.path.dirname(__file__),'..')) #this should give you absolute location of my_project folder.
+sys.path.append(parent)
+from db.db_manager import DatabaseManager
 
 app = Flask(__name__)
 url_incidencias = "https://api.status.salesforce.com/v1/incidents?instance=EU48&locale=es"

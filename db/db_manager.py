@@ -34,6 +34,7 @@ class DatabaseManager:
         except pymysql.OperationalError as e:
             print(e)
 
+
     def add_incidencias(self):
         try:
             with open(f"{self.filepath}incidencias.json", "r") as json_file:
