@@ -117,7 +117,7 @@ def test_api_request():
 
 ### Lectura de ficheros
 Se comprueba que se pueda leer los ficheros con la información que guarda la API del SaaS. 
-Este test tambien nos permite probar que esta creada la estructura de las carpetas de los 
+Este test también nos permite probar que esta creada la estructura de las carpetas de los 
 datos correctamente.
 ````python
 def test_api_request():
