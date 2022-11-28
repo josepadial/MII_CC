@@ -123,3 +123,7 @@ se depende de dos dockers más (MySQL y MailDev) se va a crear un docker-compose
 El Dockerfile se puede encontrar en el siguiente [enlace](../../Dockerfile)
 
 El docker-compose.yaml se puede encontrar en el siguiente [enlace](../../docker-compose.yaml)
+
+## Docker Hub
+Para que se suba automáticamente a Docker Hub todas las actualizaciones que hagamos sobre el Dockerfile se va a utilizar
+los webhooks de GitHub.
