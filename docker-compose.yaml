@@ -1,0 +1,40 @@
+version: '3.5'
+services:
+  db:
+    image: mysql:latest
+    container_name: db
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./sql/ALERT-ME.sql:/docker-entrypoint-initdb.d/ALERT-ME.sql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=1234
+      - MYSQL_DATABASE=ALERT-ME
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=1234
+    ports:
+      - 3306:3306
+      - 33060:33060
+  phpMyAdmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: pma
+    restart: always
+    links:
+      - db
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    ports:
+      - 8081:80
+  mailDev:
+    image: maildev/maildev:latest
+    container_name: mail
+    restart: always
+    ports:
+      - 8080:1080
+      - 25:1025
+  alet-me:
+     image: alert-me:latest
+volumes:
+  db_data:

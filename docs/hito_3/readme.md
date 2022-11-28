@@ -115,3 +115,11 @@ el almacenamiento y las redes son asequibles en la mayoría de los casos. Alpine
 si le preocupa la superficie de ataque. En nuestro caso vamos a darle más importancia al soporte comercial,
 soporte de paquetes y la complejidad del sistema y quitarle importancia a las restrinciones hardware. Con lo cual
 se va a utilizar UBUNTU.
+
+## Dockerfile y docker-compose.yaml
+Se va a generar un Dockerfile para la creación del docker con las funcionalidades del código principal. Pero como
+se depende de dos dockers más (MySQL y MailDev) se va a crear un docker-compose para automatizar el despliegue de todos los requisitos.
+
+El Dockerfile se puede encontrar en el siguiente [enlace](../../Dockerfile)
+
+El docker-compose.yaml se puede encontrar en el siguiente [enlace](../../docker-compose.yaml)
