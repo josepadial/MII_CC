@@ -30,7 +30,7 @@ jobs:
           images: josepadial/MII_CC
           tags: |
               type=ref,event=branch
-              type=ref,event=version
+              type=ref,event=tag
               type=raw,value=latest
 
       - name: Build and push
