@@ -127,3 +127,5 @@ El docker-compose.yaml se puede encontrar en el siguiente [enlace](../../docker-
 ## Docker Hub
 Para que se suba automáticamente a Docker Hub todas las actualizaciones que hagamos sobre el Dockerfile se va a utilizar
 los webhooks de GitHub.
+
+Para ello se crea un [fichero](../../.github/workflows_build.yml) que automatiza los workflows de GitHub.
