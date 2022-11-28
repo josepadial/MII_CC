@@ -4,7 +4,7 @@ sys.path.append(parent)
 from db.db_manager import DatabaseManager
 import requests, json
 
-def test_connect_database():
+'''def test_connect_database():
     database = DatabaseManager()
     assert database.connection is not None
 
@@ -13,7 +13,7 @@ def test_get_tables():
     database.cursor.execute("SHOW TABLES")
     tables = database.cursor.fetchall()
     tables = [item for t in tables for item in t]
-    assert len(tables) == 2
+    assert len(tables) == 2'''
 
 def test_api_request():
     url_incidencias = "https://api.status.salesforce.com/v1/incidents?instance=EU48&locale=es"

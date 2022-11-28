@@ -39,3 +39,12 @@ Se implementa un servicio que realizando consultas REST nos retorne un JSON
 con la información solicitada.
 
 ![](docs/img/idea_del_proyecto.png)
+
+# Concretando y planificando el proyecto
+Enlace a toda la documentación sobre US y código base [Información de US y código base](docs/hito_1/readme.md)
+
+# Tests
+Enlace a toda la documentación sobre los test [Información de los test](docs/hito_2/readme.md)
+
+# Docker
+Enlace a toda la documentación sobre docker [Información de docker](docs/hito_3/readme.md)
