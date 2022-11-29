@@ -140,3 +140,5 @@ Se siguen los siguientes pasos incluidos en la documentación oficial:
 - Hacemos login con nuestro token
 - Como último paso toca subir la imagen y comprobar su correcta subida.
 - Debemos de enlazarlo con GitHub para que nos aparezca como PACKAGE.
+![](../img/docker_push.png)
+![](../img/github_registry_connect.png)
