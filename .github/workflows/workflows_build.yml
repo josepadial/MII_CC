@@ -30,7 +30,9 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: josepadial/MII_CC
+          images: |
+              josepadial/MII_CC
+              ghcr.io/josepadial/MII_CC
           tags: |
               type=ref,event=branch
               type=raw,value=latest
