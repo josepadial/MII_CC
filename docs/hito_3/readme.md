@@ -129,3 +129,14 @@ Para que se suba automáticamente a Docker Hub todas las actualizaciones que hag
 los webhooks de GitHub.
 
 Para ello se crea un [fichero](../../.github/workflows/workflows_build.yml) que automatiza los workflows de GitHub.
+![](../img/dockerhub.png)
+![](../img/workflow.png)
+
+## GitHub Container Registry
+A continuación se demuestra cómo se despliega nuestro contenedor a GitHub Container Registry:
+
+Se siguen los siguientes pasos incluidos en la documentación oficial:
+- Se crea un token desde Developer Settings y se guarda en una variable.
+- Hacemos login con nuestro token
+- Como último paso toca subir la imagen y comprobar su correcta subida.
+- Debemos de enlazarlo con GitHub para que nos aparezca como PACKAGE.
