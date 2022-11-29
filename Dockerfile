@@ -23,5 +23,4 @@ RUN export $(cat envfile.env | xargs)
 COPY . .
 COPY makefile makefile
 
-CMD [ "make", "run"]
 CMD [ "make", "tests"]
