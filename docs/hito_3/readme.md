@@ -1,18 +1,21 @@
 # Hito 3: Creación de un contenedor para pruebas
 Índice:
 <!-- TOC -->
-* [Elección de la imagen para el contenedor](#eleccin-de-la-imagen-para-el-contenedor)
-  * [Hardware](#hardware)
-  * [Seguridad](#seguridad)
-  * [Rendimiento](#rendimiento)
-  * [Soporte](#soporte)
-  * [Pruebas de tiempo](#pruebas-de-tiempo)
-    * [Alpine Linux](#alpine-linux)
-    * [Ubuntu Linux](#ubuntu-linux)
-  * [Pruebas de tamaño](#pruebas-de-tamao)
-    * [Imagen base](#imagen-base)
-    * [Imagen Wordpress](#imagen-wordpress)
-  * [Conclusion](#conclusion)
+  * [Elección de la imagen para el contenedor](#eleccin-de-la-imagen-para-el-contenedor)
+    * [Hardware](#hardware)
+    * [Seguridad](#seguridad)
+    * [Rendimiento](#rendimiento)
+    * [Soporte](#soporte)
+    * [Pruebas de tiempo](#pruebas-de-tiempo)
+      * [Alpine Linux](#alpine-linux)
+      * [Ubuntu Linux](#ubuntu-linux)
+    * [Pruebas de tamaño](#pruebas-de-tamao)
+      * [Imagen base](#imagen-base)
+      * [Imagen Wordpress](#imagen-wordpress)
+    * [Conclusion](#conclusion)
+  * [Dockerfile y docker-compose.yaml](#dockerfile-y-docker-composeyaml)
+  * [Docker Hub](#docker-hub)
+  * [GitHub Container Registry](#github-container-registry)
 <!-- TOC -->
 
 ## Elección de la imagen para el contenedor
