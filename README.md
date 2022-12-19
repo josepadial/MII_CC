@@ -5,6 +5,10 @@ CC - UGR (Cloud Computing: Fundamentos e Infraestructuras)
 <!-- TOC -->
 * [Motivación](#motivacin)
 * [Descripción](#descripcin)
+* [Concretando y planificando el proyecto](#concretando-y-planificando-el-proyecto)
+* [Tests](#tests)
+* [Docker](#docker)
+* [Integración continua](#integracin-continua)
 <!-- TOC -->
 
 # Motivación
@@ -48,3 +52,6 @@ Enlace a toda la documentación sobre los test [Información de los test](docs/h
 
 # Docker
 Enlace a toda la documentación sobre docker [Información de docker](docs/hito_3/readme.md)
+
+# Integración continua
+Enlace a toda la documentación sobre integración continua [Información de integración continua](docs/hito_4/readme.md)
