@@ -3,6 +3,7 @@ import os
 import json
 from datetime import datetime
 from dateutil import tz
+from MII_CC.email.email import EmailManager
 
 
 def format_date(date, op=True, zone="UTC"):
@@ -23,6 +24,7 @@ class DatabaseManager:
         self.connection = None
         self.cursor = None
         self.filepath = "../data/"
+        self.email = EmailManager()
 
         self.connect()
 
@@ -34,6 +36,15 @@ class DatabaseManager:
         except pymysql.OperationalError as e:
             print(e)
 
+    def ulify(self, elements):
+        if elements is None:
+            string = "No hay servicios afectados"
+        else:
+            string = "<ul>\n"
+            for s in elements:
+                string += "<li>" + str(s) + "</li>\n"
+            string += "</ul>"
+        return string
 
     def add_incidencias(self):
         try:
@@ -46,6 +57,8 @@ class DatabaseManager:
             primary_keys = [item for t in primary_keys for item in t]
             for incidencia in incidencias:
                 if incidencia['id'] not in primary_keys:
+                    incident_html = {"info_relevante": {}, "info_adicional": {}, "info_relevante_url": {},
+                                     "info_adicional_url": {}, "titulo": ""}
                     id_inc = incidencia["id"]
                     external_id = incidencia["externalId"]
                     message = json.dumps(incidencia["message"]).replace("'", "")
@@ -78,6 +91,17 @@ class DatabaseManager:
                     else:
                         service_keys = None
 
+                    incident_html["titulo"] = message
+                    incident_html["info_relevante"]["Creación de la incidencia"] = created_at
+                    incident_html["info_relevante"]["Actualización de la incidencia"] = updated_at
+                    incident_html["info_relevante"]["Severity"] = is_core
+                    incident_html["info_adicional"]["ID"] = id_inc
+                    incident_html["info_adicional"]["Información"] = additional_information
+                    incident_html["info_adicional"]["Servicios afectados"] = self.ulify(incidencia["serviceKeys"])
+                    incident_html["info_adicional"]["Instancias afectados"] = self.ulify(incidencia["instanceKeys"])
+
+                    self.email.send_email(data=incident_html, subject=f"Resumen de la incidencia {id_inc}", incidencias=True)
+
                     self.cursor.execute(f"INSERT INTO incidencias (id, externalId, message, additionalInformation,"
                                         f"isCore, affectsAll, createdAt, updatedAt, IncidentImpacts,"
                                         f"IncidentEvents, instanceKeys, serviceKeys) VALUES ('{id_inc}', '{external_id}', "
@@ -99,6 +123,8 @@ class DatabaseManager:
             primary_keys = [item for t in primary_keys for item in t]
             for cambio in cambios:
                 if cambio['id'] not in primary_keys:
+                    change_html = {"info_relevante": {}, "info_adicional": {}, "info_relevante_url": {},
+                                   "info_adicional_url": {}, "titulo": ""}
                     id_ch = cambio["id"]
                     message = json.dumps(cambio["message"]).replace("'", "")
                     external_id = cambio["externalId"].replace("'", "")
@@ -133,6 +159,18 @@ class DatabaseManager:
                         service_keys = service_keys.join(cambio["serviceKeys"]).replace("'", "")
                     else:
                         service_keys = None
+
+                    change_html["titulo"] = name
+                    change_html["info_relevante"]["Creación de la incidencia"] = created_at
+                    change_html["info_relevante"]["Actualización de la incidencia"] = updated_at
+                    change_html["info_relevante"]["Severity"] = is_core
+                    change_html["info_adicional"]["ID"] = id_ch
+                    change_html["info_adicional"]["Información"] = additional_information
+                    change_html["info_adicional"]["Servicios afectados"] = self.ulify(cambio["serviceKeys"])
+                    change_html["info_adicional"]["Instancias afectados"] = self.ulify(cambio["instanceKeys"])
+
+                    self.email.send_email(change_html, f"Resumen del cambio {id_ch}", False)
+
                     self.cursor.execute(f"INSERT INTO cambios (id, message, externalId, name_ch, plannedStartTime,"
                                         f"plannedEndTime, additionalInformation, isCore, affectsAll, createdAt,"
                                         f"updatedAt, MaintenanceImpacts, MaintenanceEvents, instanceKeys, serviceKeys)"

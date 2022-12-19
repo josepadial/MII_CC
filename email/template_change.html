@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html lang="es" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+    <head>
+        <title></title>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <!--[if mso]>
+            <xml>
+                <o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch><o:AllowPNG /></o:OfficeDocumentSettings>
+            </xml>
+        <![endif]-->
+        <!--[if !mso]><!-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+        <!--<![endif]-->
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+				background-color: #fcfcfc;
+				margin: 0;
+				padding: 0;
+				-webkit-text-size-adjust: none;
+				text-size-adjust: none;
+            }
+
+			table.nl-container{
+				mso-table-lspace: 0pt;
+				mso-table-rspace: 0pt;
+				background-color: #fcfcfc;
+				border: 0pt;
+				cellpadding: 0pt;
+				cellspacing: 0pt;
+				width: 80%;
+				align: center;
+
+			}
+
+			tr.cambioNuevo{
+				mso-table-lspace: 0pt;
+				mso-table-rspace: 0pt;
+				background-color: #66f;
+				width: 80%;
+				font-family: 'Varela Round', 'Trebuchet MS', Helvetica, sans-serif;
+				mso-line-height-alt: 14.399999999999999px;
+				color: #ffffff;
+				line-height: 1.2;
+				margin: 0;
+				font-size: 30px;
+				text-align: center;
+			}
+
+			tr.titulo{
+				mso-table-lspace: 0pt;
+				mso-table-rspace: 0pt;
+				width: 80%;
+				font-family: 'Varela Round', 'Trebuchet MS', Helvetica, sans-serif;
+				mso-line-height-alt: 14.399999999999999px;
+				color: #000000;
+				line-height: 1.2;
+				margin: 0;
+				font-size: 24px;
+				text-align: center;
+			}
+
+			tr.informacion{
+				mso-table-lspace: 0pt;
+				mso-table-rspace: 0pt;
+				width: 80%;
+				font-family: 'Varela Round', 'Trebuchet MS', Helvetica, sans-serif;
+				mso-line-height-alt: 14.399999999999999px;
+				color: #ffffff;
+				line-height: 1.2;
+				margin: 0;
+				padding-bottom: 5px;
+				padding-right: 20px;
+				padding-top: 35px;
+			}
+
+			span.tituloInformacion{
+				font-size: 20px;
+				color: #000000;
+				margin: 0;
+				text-align: left;
+				font-family: 'Varela Round', 'Trebuchet MS', Helvetica, sans-serif;
+				line-height: 1.2;
+			}
+
+			li.contenidoInformacion{
+				text-align: left;
+				font-size: 14px;
+				font-family: Lato, Tahoma, Verdana, Segoe, sans-serif;
+				mso-line-height-alt: 18px;
+				color: #555555;
+				line-height: 150%;
+				padding-bottom:0px;
+				padding-right:20px;
+				padding-top:0px;
+			}
+
+			hr {
+				display: block;
+				margin-top: 0.5em;
+				margin-bottom: 0.5em;
+				margin-left: auto;
+				margin-right: auto;
+				border-style: inset;
+				border-width: 1px;
+				color: #ffffff;
+				width: 80%;
+				border-top: 1px solid #cbcbcb;
+			}
+
+			tr.footer{
+				font-size: 12px;
+				margin: 0;
+				text-align: center;
+				mso-line-height-alt: 25.5px;
+				color: #ffffff;
+				line-height: 1.5;
+				font-family: Lato, Tahoma, Verdana, Segoe, sans-serif;
+				mso-table-lspace: 0pt;
+				mso-table-rspace: 0pt;
+				background-color: #909090;
+				width: 100%;
+			}
+
+            a[x-apple-data-detectors] {
+                color: inherit !important;
+                text-decoration: inherit !important;
+            }
+
+            #MessageViewBody a {
+                color: inherit;
+                text-decoration: none;
+            }
+
+            p {
+                line-height: inherit;
+            }
+
+            @media (max-width: 720px) {
+                .icons-inner {
+                    text-align: center;
+                }
+
+                .icons-inner td {
+                    margin: 0 auto;
+                }
+
+                .row-content {
+                    width: 100% !important;
+                }
+
+                .image_block img.big {
+                    width: auto !important;
+                }
+
+                .stack .column {
+                    width: 100%;
+                    display: block;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <table class="nl-container" role="presentation" align="center">
+            <tbody>
+				<tr class="cambioNuevo">
+					<td>
+						<span>
+							NUEVO CAMBIO <br />
+						</span>
+					</td>
+				</tr>
+				<tr class="titulo">
+					<td>
+						<span>
+							<br />
+							{{ change.titulo }}
+							<br />
+						</span>
+					</td>
+				</tr>
+				<tr class="informacion">
+					<td>
+						<div>
+							<div>
+								<p>
+									<span class="tituloInformacion">
+										<strong>Información relevante</strong>
+									</span>
+								</p>
+							</div>
+							<div>
+								<ul>
+									{% for key, value in change.info_relevante.items() %}
+									<li class="contenidoInformacion">
+										<span><strong>{{ key }}:</strong> {{ value }}</span>
+									</li>
+									{% endfor %} {% for key, value in change.info_relevante_url.items() %}
+									<li class="contenidoInformacion">
+										<span><strong>{{ key }}:</strong> <a href={{ value }}>Enlace</a></span>
+									</li>
+									{% endfor %}
+								</ul>
+							</div>
+							<div>
+								<p>
+									<span class="tituloInformacion">
+										<strong>Información adicional</strong>
+									</span>
+								</p>
+							</div>
+							<div>
+								<ul>
+									{% for key, value in change.info_adicional.items() %}
+									<li class="contenidoInformacion">
+										<span><strong>{{ key }}:</strong> {{ value }}</span>
+									</li>
+									{% endfor %} {% for key, value in change.info_adicional_url.items() %}
+									<li class="contenidoInformacion">
+										<span><strong>{{ key }}:</strong> <a href={{ value }}>Enlace</a></span>
+									</li>
+									{% endfor %}
+								</ul>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span>
+							<hr>
+						</span>
+					</td>
+				</tr>
+				<tr class="footer">
+					<td>
+						<div>
+							<div>
+								<p>
+									<span><strong>Jose Antonio Padial Molina</strong></span>
+									<br />
+									<a
+										href="mailto:josepadial@correo.ugr.es"
+										rel="noopener"
+										style="text-decoration: underline; color: #ffffff;"
+										target="_blank"
+										title="josepadial@correo.ugr.es"
+									>
+										<span><strong>josepadial@correo.ugr.es</strong></span>
+									</a>
+								</p>
+							</div>
+						</div>
+					</td>
+				</tr>
+            </tbody>
+        </table>
+    </body>
+</html>
