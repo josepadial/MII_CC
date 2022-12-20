@@ -3,13 +3,14 @@ orbs:
   python: circleci/python@2.1.1
 jobs:
   build-and-test:
+    executor: python/default
     docker:
       - image: josepadial/mii_cc
     steps:
       - checkout
-      - run:
-          name: Intall requirements
-          command: pip install -r ./src/requirements.txt
+      - python/install-packages:
+          pip-dependency-file: ./src/requirements.txt
+          pkg-manager: pip
       - run:
           name: Running tests
           command: pytest
