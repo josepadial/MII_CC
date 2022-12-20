@@ -7,9 +7,8 @@ jobs:
       - checkout
       - run:
         command: sudo apt install python3
-      - python/install-packages:
-          pip-dependency-file: ./src/requirements.txt
-          pkg-manager: pip
+      - run:
+          command: pip install -r ./src/requirements.txt
       - run:
           name: Running tests
           command: pytest
