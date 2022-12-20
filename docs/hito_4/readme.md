@@ -22,3 +22,18 @@
 
 Tras haber analizado con detalle el top 10 de plataformas para CI con GitHub se ha decidido
 que para este proyecto se van a utilizar Travis CI y Circle CI.
+
+## Integración Continua a través de Travis CI
+[Documentación de Travis CI para configurarlo con Python](https://docs.travis-ci.com/user/languages/python/)
+
+Fichero [.travis.yml](../../.travis.yml)
+
+Para configurar Travis CI, me registré desde [Travis CI for Education and the GitHub Student Developer](https://education.travis-ci.com) 
+con mi cuenta de GitHub. Como siguiente paso lo que realicé fue darle permisos a mis repositorios
+y enlazar el repositorio del proyecto. Como plan se seleccionó el gratuito.
+![](../img/travis_plan.png)
+
+A continuación, usando la documentación mencionada al principio de este apartado configuré el fichero
+[.travis.yml](../../.travis.yml)
+
+## Integración Continua a través de Circle CI
