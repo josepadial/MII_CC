@@ -1,9 +1,11 @@
 import pymysql
-import os
+import os, sys
 import json
 from datetime import datetime
 from dateutil import tz
-from MII_CC.email.email import EmailManager
+parent = os.path.abspath(os.path.join(os.path.dirname(__file__),'..')) #this should give you absolute location of my_project folder.
+sys.path.append(parent)
+from emails.email import EmailManager
 
 
 def format_date(date, op=True, zone="UTC"):

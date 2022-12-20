@@ -43,3 +43,15 @@ A continuación, usando la documentación mencionada al principio de este aparta
 ![](../img/travis_terminal.png)
 
 ## Integración Continua a través de Circle CI
+Previamente, tenemos que registrarnos en Circle-CI. El proceso es sencillo si se utiliza GitHub ya que sólo hay que 
+iniciar sesión e indicar qué repositorio queremos conectar.
+
+Una vez que hemos iniciado sesión y hemos elegido el repositorio, automáticamente nos escaneará en busca del directorio 
+.circleci que debería además contener un archivo de configuración de nombre config.yml como se ve en la siguiente imagen, 
+en mi caso está en la rama hito_4.
+
+El archivo de configuración se puede consultar en [config.yml](../../.circleci/config.yml)
+
+![](../img/circle_set_up.png)
+
+![](../img/circle_resultado.png)
