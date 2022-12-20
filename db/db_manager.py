@@ -5,7 +5,7 @@ from datetime import datetime
 from dateutil import tz
 parent = os.path.abspath(os.path.join(os.path.dirname(__file__),'..')) #this should give you absolute location of my_project folder.
 sys.path.append(parent)
-from email.email import EmailManager
+from emails.email import EmailManager
 
 
 def format_date(date, op=True, zone="UTC"):

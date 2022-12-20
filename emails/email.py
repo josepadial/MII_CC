@@ -23,8 +23,8 @@ class Alert:
 class EmailManager:
     def __init__(self):
         self.smtp = None
-        self.template_incident = "../email/template_incident.html"
-        self.template_change = "../email/template_change.html"
+        self.template_incident = "../emails/template_incident.html"
+        self.template_change = "../emails/template_change.html"
         self.from_addr = "josepadial@correo.ugr.es"
         self.send_to = "josepadial@correo.ugr.es"
         self.connect()
