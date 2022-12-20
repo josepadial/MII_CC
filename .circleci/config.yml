@@ -8,10 +8,10 @@ jobs:
       - run:
         command: sudo apt install python3
       - run:
-          command: pip install -r ./src/requirements.txt
+        command: pip install -r ./src/requirements.txt
       - run:
-          name: Running tests
-          command: pytest
+        name: Running tests
+        command: pytest
 workflows:
   sample:
     jobs:
