@@ -9,7 +9,7 @@ jobs:
       - checkout
       - python/install-packages:
           pip-dependency-file: src/requirements.txt
-          pkg-manager: pip
+          pkg-manager: pip3
       - run:
           name: Running tests
           command: pytest
