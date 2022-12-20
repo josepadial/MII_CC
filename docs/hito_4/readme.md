@@ -36,4 +36,10 @@ y enlazar el repositorio del proyecto. Como plan se seleccionó el gratuito.
 A continuación, usando la documentación mencionada al principio de este apartado configuré el fichero
 [.travis.yml](../../.travis.yml)
 
+![](../img/github_travis_branch.png)
+
+![](../img/travis_result.png)
+
+![](../img/travis_terminal.png)
+
 ## Integración Continua a través de Circle CI
