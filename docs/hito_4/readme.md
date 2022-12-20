@@ -48,4 +48,6 @@ iniciar sesión e indicar qué repositorio queremos conectar.
 
 Una vez que hemos iniciado sesión y hemos elegido el repositorio, automáticamente nos escaneará en busca del directorio 
 .circleci que debería además contener un archivo de configuración de nombre config.yml como se ve en la siguiente imagen, 
-en mi caso está en la rama hito_4
+en mi caso está en la rama hito_4.
+
+![](../img/circle_set_up.png)
