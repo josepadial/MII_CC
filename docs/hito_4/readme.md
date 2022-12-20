@@ -2,6 +2,8 @@
 Índice:
 <!-- TOC -->
 * [Comparativa de software para CI](#comparativa-de-software-para-ci)
+* [Integración Continua a través de Travis CI](#integracin-continua-a-travs-de-travis-ci)
+* [Integración Continua a través de Circle CI](#integracin-continua-a-travs-de-circle-ci)
 <!-- TOC -->
 
 ## Comparativa de software para CI
