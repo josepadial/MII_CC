@@ -7,9 +7,9 @@ jobs:
       - image: josepadial/mii_cc
     steps:
       - checkout
-      - python/install-packages:
-          pip-dependency-file: src/requirements.txt
-          pkg-manager: pip3
+      - run:
+          name: Intall requirements
+          command: pip install -r ./src/requirements.txt
       - run:
           name: Running tests
           command: pytest
