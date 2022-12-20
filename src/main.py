@@ -49,5 +49,5 @@ def update_data_database():
         return {"status": "failed", "message": str(e)}
 
 if __name__ == "__main__":
-    port = int(os.getenv('PORT', 8080))
+    port = int(os.getenv('PORT', 8082))
     app.run(host="0.0.0.0", port=port)
