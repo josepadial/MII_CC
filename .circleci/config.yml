@@ -1,11 +1,12 @@
 version: 2.1
 jobs:
   build-and-test:
-    executor: python/default
     docker:
       - image: josepadial/mii_cc
     steps:
       - checkout
+      - run:
+        command: sudo apt install python3
       - python/install-packages:
           pip-dependency-file: ./src/requirements.txt
           pkg-manager: pip
