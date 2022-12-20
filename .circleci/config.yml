@@ -12,7 +12,3 @@ jobs:
       - run:
           name: Running tests
           command: pytest
-workflows:
-  sample:
-    jobs:
-      - build-and-test
