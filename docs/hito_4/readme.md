@@ -50,4 +50,8 @@ Una vez que hemos iniciado sesión y hemos elegido el repositorio, automáticame
 .circleci que debería además contener un archivo de configuración de nombre config.yml como se ve en la siguiente imagen, 
 en mi caso está en la rama hito_4.
 
+El archivo de configuración se puede consultar en [config.yml](../../.circleci/config.yml)
+
 ![](../img/circle_set_up.png)
+
+![](../img/circle_resultado.png)
