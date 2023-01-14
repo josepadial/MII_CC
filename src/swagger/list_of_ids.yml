@@ -1,0 +1,25 @@
+tags:
+  - Lista de claves priamrias de una tabla
+parameters:
+  - name: tipo
+    required: True
+    in: path
+    type: string
+    enum: ['Incidencias', 'Cambios']
+    default: Incidencias
+definitions:
+  Lista de claves priamrias de una tabla:
+    type: string
+    description: Lista de Ids de incidencia o cambio que hay en la base de datos
+responses:
+  200:
+    description: Success
+    schema:
+      properties:
+        List of ids:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: integer

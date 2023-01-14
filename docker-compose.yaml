@@ -15,6 +15,9 @@ services:
     ports:
       - 3306:3306
       - 33060:33060
+    networks:
+      vnsq6:
+        ipv4_address: 10.5.0.5
   phpMyAdmin:
     image: phpmyadmin/phpmyadmin:latest
     container_name: pma
@@ -27,14 +30,36 @@ services:
       PMA_ARBITRARY: 1
     ports:
       - 8081:80
+    networks:
+      vnsq6:
+        ipv4_address: 10.5.0.6
   mailDev:
     image: maildev/maildev:latest
     container_name: mail
     restart: always
     ports:
       - 8080:1080
-      - 25:1025
+      - 1025:1025
+    networks:
+      vnsq6:
+        ipv4_address: 10.5.0.7
   alet-me:
-     image: alert-me:latest
+    image: alert-me:5.0.0
+    container_name: alert-me
+    build: .
+    restart: always
+    ports:
+      - 5000:5000
+      - 8082:8082
+    networks:
+      vnsq6:
+        ipv4_address: 10.5.0.8
+networks:
+  vnsq6:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.5.0.0/16
+          gateway: 10.5.0.1
 volumes:
   db_data:

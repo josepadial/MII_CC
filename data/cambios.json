@@ -1,233 +1,10 @@
 [
     {
-        "id": 525695,
-        "message": {
-            "maintenanceType": "release",
-            "availability": "fullyAvailable",
-            "eventStatus": "confirmed"
-        },
-        "externalId": "a3GEE0000005CWn2AM",
-        "name": "Health Cloud - Winter '23 - Major Release",
-        "plannedStartTime": "2022-10-14T23:00:00.000Z",
-        "plannedEndTime": "2022-10-15T23:00:00.000Z",
-        "additionalInformation": "Active Orgs upgrade will happen during the window time. Orgs whose status is not active will be upgraded during 16 Oct (Sunday) late PST hours.",
-        "isCore": true,
-        "affectsAll": true,
-        "createdAt": "2022-05-31T04:51:37.091Z",
-        "updatedAt": "2022-10-16T14:44:01.361Z",
-        "MaintenanceImpacts": [
-            {
-                "id": 12705,
-                "startTime": "2022-10-14T23:00:00.000Z",
-                "endTime": "2022-10-16T14:43:00.000Z",
-                "type": "featuresActivated",
-                "severity": "maintenance",
-                "createdAt": "2022-10-16T14:44:01.409Z",
-                "updatedAt": "2022-10-16T14:44:01.425Z",
-                "startTimeCreatedAt": "2022-10-16T14:44:01.410Z",
-                "startTimeModifiedAt": null,
-                "endTimeCreatedAt": "2022-10-16T14:44:01.410Z",
-                "endTimeModifiedAt": null
-            }
-        ],
-        "MaintenanceEvents": [
-            {
-                "id": 145856,
-                "type": "reminder",
-                "message": "This maintenance will happen in 10 days.",
-                "createdAt": "2022-10-03T23:02:51.921Z",
-                "updatedAt": "2022-10-03T23:02:51.921Z"
-            },
-            {
-                "id": 140413,
-                "type": "scheduled",
-                "message": "This maintenance is scheduled.",
-                "createdAt": "2022-08-14T23:00:56.314Z",
-                "updatedAt": "2022-08-14T23:00:56.314Z"
-            }
-        ],
-        "instanceKeys": [
-            "EU48"
-        ],
-        "serviceKeys": [
-            "coreService"
-        ]
-    },
-    {
-        "id": 525802,
-        "message": {
-            "maintenanceType": "release",
-            "availability": "fullyAvailable",
-            "eventStatus": "confirmed"
-        },
-        "externalId": "a3GEE0000005CYP2A2",
-        "name": "Financial Services Cloud - Winter '23 - Major Release",
-        "plannedStartTime": "2022-10-14T23:00:00.000Z",
-        "plannedEndTime": "2022-10-15T23:00:00.000Z",
-        "additionalInformation": "Active Orgs upgrade will happen during the window time. Orgs whose status is not active will be upgraded during 16 Oct (Sunday) late PST hours.",
-        "isCore": true,
-        "affectsAll": true,
-        "createdAt": "2022-05-31T04:51:44.382Z",
-        "updatedAt": "2022-10-16T19:35:06.078Z",
-        "MaintenanceImpacts": [
-            {
-                "id": 12743,
-                "startTime": "2022-10-14T23:00:00.000Z",
-                "endTime": "2022-10-16T19:35:00.000Z",
-                "type": "featuresActivated",
-                "severity": "maintenance",
-                "createdAt": "2022-10-16T19:35:06.119Z",
-                "updatedAt": "2022-10-16T19:35:06.126Z",
-                "startTimeCreatedAt": "2022-10-16T19:35:06.119Z",
-                "startTimeModifiedAt": null,
-                "endTimeCreatedAt": "2022-10-16T19:35:06.119Z",
-                "endTimeModifiedAt": null
-            }
-        ],
-        "MaintenanceEvents": [
-            {
-                "id": 145821,
-                "type": "reminder",
-                "message": "This maintenance will happen in 10 days.",
-                "createdAt": "2022-10-03T23:02:50.237Z",
-                "updatedAt": "2022-10-03T23:02:50.237Z"
-            },
-            {
-                "id": 140256,
-                "type": "scheduled",
-                "message": "This maintenance is scheduled.",
-                "createdAt": "2022-08-14T23:00:29.568Z",
-                "updatedAt": "2022-08-14T23:00:29.568Z"
-            }
-        ],
-        "instanceKeys": [
-            "EU48"
-        ],
-        "serviceKeys": [
-            "coreService"
-        ]
-    },
-    {
-        "id": 220184,
-        "message": {
-            "maintenanceType": "release",
-            "availability": "unavailable",
-            "eventStatus": "confirmed"
-        },
-        "externalId": "a3GEE0000001BeD2AU",
-        "name": "Winter '23 Major Release",
-        "plannedStartTime": "2022-10-14T23:00:00.000Z",
-        "plannedEndTime": "2022-10-14T23:05:00.000Z",
-        "additionalInformation": null,
-        "isCore": true,
-        "affectsAll": false,
-        "createdAt": "2021-10-25T21:18:50.498Z",
-        "updatedAt": "2021-10-25T21:18:50.498Z",
-        "MaintenanceImpacts": [
-            {
-                "id": 12089,
-                "startTime": "2022-10-14T23:00:13.000Z",
-                "endTime": "2022-10-14T23:01:12.000Z",
-                "type": "deployingRelease",
-                "severity": "maintenance",
-                "createdAt": "2022-10-14T23:00:17.886Z",
-                "updatedAt": "2022-10-14T23:01:16.512Z",
-                "startTimeCreatedAt": "2022-10-14T23:00:17.886Z",
-                "startTimeModifiedAt": null,
-                "endTimeCreatedAt": "2022-10-14T23:01:16.512Z",
-                "endTimeModifiedAt": null
-            }
-        ],
-        "MaintenanceEvents": [
-            {
-                "id": 148452,
-                "type": "majorReleaseFeaturesEnabled",
-                "message": "The Salesforce major release is live, and you can already use a subset of its features. Other new features are being enabled gradually as Release Updates (RUs) complete, and you can expect all features to be available within the next 24 hours. For information about the Release Updates, see the release notes.",
-                "createdAt": "2022-10-14T23:19:24.278Z",
-                "updatedAt": "2022-10-14T23:19:24.278Z"
-            },
-            {
-                "id": 148419,
-                "type": "majorReleaseReleaseIsLive",
-                "message": "The release is now live. The instance should be generally available as we continue to perform upgrade activities including feature enablement, which typically completes within six hours and no later than 24 hours.",
-                "createdAt": "2022-10-14T23:01:25.084Z",
-                "updatedAt": "2022-10-14T23:01:25.084Z"
-            },
-            {
-                "id": 148375,
-                "type": "majorRelease10MinutesToZdt",
-                "message": "The release is about to begin.",
-                "createdAt": "2022-10-14T22:50:06.279Z",
-                "updatedAt": "2022-10-14T22:50:06.279Z"
-            },
-            {
-                "id": 145983,
-                "type": "reminder",
-                "message": "This maintenance will happen in 10 days.",
-                "createdAt": "2022-10-03T23:03:13.381Z",
-                "updatedAt": "2022-10-03T23:03:13.381Z"
-            },
-            {
-                "id": 140343,
-                "type": "scheduled",
-                "message": "This maintenance is scheduled.",
-                "createdAt": "2022-08-14T23:00:51.502Z",
-                "updatedAt": "2022-08-14T23:00:51.502Z"
-            }
-        ],
-        "instanceKeys": [
-            "EU48"
-        ],
-        "serviceKeys": [
-            "coreService"
-        ]
-    },
-    {
-        "id": 615580,
-        "message": {
-            "maintenanceType": "scheduledMaintenance",
-            "availability": "fullyAvailable",
-            "eventStatus": "confirmed"
-        },
-        "externalId": "a3GEE0000007xsz2AA",
-        "name": "Org Migrations",
-        "plannedStartTime": "2022-11-06T02:00:00.000Z",
-        "plannedEndTime": "2022-11-06T05:00:00.000Z",
-        "additionalInformation": "Admins of orgs scheduled to migrate have been notified via a Salesforce Product and Service notification sent on 9/16/22 or later.  If your org doesn't receive a notification, then you aren\u2019t migrating. Orgs being migrated are available in read-only mode. Start and completion notifications aren\u2019t posted to Trust during the maintenance. After migrations are completed, orgs can be activated on the target instance before the end of this maintenance window. The instance is fully available for all other orgs",
-        "isCore": true,
-        "affectsAll": false,
-        "createdAt": "2022-10-25T04:05:28.156Z",
-        "updatedAt": "2022-10-25T04:05:28.156Z",
-        "MaintenanceImpacts": [],
-        "MaintenanceEvents": [
-            {
-                "id": 149931,
-                "type": "reminder",
-                "message": "This maintenance will happen in 10 days.",
-                "createdAt": "2022-10-26T02:03:23.061Z",
-                "updatedAt": "2022-10-26T02:03:23.061Z"
-            },
-            {
-                "id": 149757,
-                "type": "scheduled",
-                "message": "This maintenance is scheduled.",
-                "createdAt": "2022-10-25T04:09:27.858Z",
-                "updatedAt": "2022-10-25T04:09:27.858Z"
-            }
-        ],
-        "instanceKeys": [
-            "EU48"
-        ],
-        "serviceKeys": [
-            "coreService"
-        ]
-    },
-    {
         "id": 553588,
         "message": {
             "maintenanceType": "switch",
             "availability": "unavailable",
-            "eventStatus": "confirmed"
+            "eventStatus": "eventStatusCanceled"
         },
         "externalId": "a3GEE0000007WJJ2A2",
         "name": "Database Maintenance with Site Switch",
@@ -237,15 +14,102 @@
         "isCore": true,
         "affectsAll": false,
         "createdAt": "2022-10-13T14:35:56.191Z",
-        "updatedAt": "2022-10-13T14:35:56.191Z",
+        "updatedAt": "2022-12-13T05:03:43.576Z",
         "MaintenanceImpacts": [],
         "MaintenanceEvents": [
+            {
+                "id": 155100,
+                "type": "cancelled",
+                "message": "Due to unforeseen issues, this activity has been canceled.",
+                "createdAt": "2022-12-13T05:03:43.509Z",
+                "updatedAt": "2022-12-13T05:03:43.509Z"
+            },
+            {
+                "id": 154077,
+                "type": "reminder",
+                "message": "This maintenance will happen in 10 days.",
+                "createdAt": "2022-12-07T03:02:00.087Z",
+                "updatedAt": "2022-12-07T03:02:00.087Z"
+            },
             {
                 "id": 148243,
                 "type": "scheduled",
                 "message": "This maintenance is scheduled.",
                 "createdAt": "2022-10-13T14:39:56.206Z",
                 "updatedAt": "2022-10-13T14:39:56.206Z"
+            }
+        ],
+        "instanceKeys": [
+            "EU48"
+        ],
+        "serviceKeys": [
+            "coreService"
+        ]
+    },
+    {
+        "id": 618872,
+        "message": {
+            "maintenanceType": "release",
+            "availability": "fullyAvailable",
+            "eventStatus": "confirmed"
+        },
+        "externalId": "a3GEE0000008KWE2A2",
+        "name": "Chat / Omni-Channel Spring '23 Release Preparation Notice",
+        "plannedStartTime": "2023-01-18T00:30:00.000Z",
+        "plannedEndTime": "2023-01-18T00:40:00.000Z",
+        "additionalInformation": "This release preparation event will prepare your instance for the Spring \u201923 major release upgrade. During this event, Chat (formerly known as Live Agent), Omni-Channel, Messaging, Einstein Bots and SOS features will be available with no disruptions in service. After this event, there will be no changes to your Chat (formerly known as Live Agent), Omni-Channel, Messaging, Einstein Bots and SOS services. While this event was posted to TRUST, no further TRUST notifications about it will be sent.",
+        "isCore": false,
+        "affectsAll": false,
+        "createdAt": "2022-11-16T20:25:22.828Z",
+        "updatedAt": "2022-11-16T20:25:22.828Z",
+        "MaintenanceImpacts": [],
+        "MaintenanceEvents": [
+            {
+                "id": 157450,
+                "type": "reminder",
+                "message": "This maintenance will happen in 10 days.",
+                "createdAt": "2023-01-07T00:33:25.243Z",
+                "updatedAt": "2023-01-07T00:33:25.243Z"
+            },
+            {
+                "id": 151480,
+                "type": "scheduled",
+                "message": "This maintenance is scheduled.",
+                "createdAt": "2022-11-18T00:31:20.555Z",
+                "updatedAt": "2022-11-18T00:31:20.555Z"
+            }
+        ],
+        "instanceKeys": [
+            "EU48"
+        ],
+        "serviceKeys": [
+            "liveAgent"
+        ]
+    },
+    {
+        "id": 621634,
+        "message": {
+            "maintenanceType": "switch",
+            "availability": "unavailable",
+            "eventStatus": "confirmed"
+        },
+        "externalId": "a3GEE0000008huD2AQ",
+        "name": "Database Maintenance with Site Switch",
+        "plannedStartTime": "2023-02-05T03:00:00.000Z",
+        "plannedEndTime": "2023-02-05T03:30:00.000Z",
+        "additionalInformation": "During this 30 minute maintenance, the Salesforce Technology team will be updating system configurations to provide the continued service operating levels you\u2019ve come to expect from Salesforce. A major component of this maintenance is a database upgrade, and as a result, the instance will be unavailable during this time. Long-running activities in flight will be terminated prior to the maintenance and must be restarted when the maintenance completes. During the maintenance, a site switch will take place. This article contains additional information about site switching: https://help.salesforce.com/s/articleView?id=000337828&type=1. We\u2019ll update customers via the Trust site when the maintenance starts and completes. We recommend subscribing to Trust Notifications to stay informed. We apologize for any inconvenience this could cause you or your organization.",
+        "isCore": true,
+        "affectsAll": false,
+        "createdAt": "2022-12-12T15:48:58.432Z",
+        "updatedAt": "2022-12-13T04:55:43.512Z",
+        "MaintenanceImpacts": [],
+        "MaintenanceEvents": [
+            {
+                "id": 155086,
+                "type": "scheduled",
+                "message": "This maintenance is scheduled.",
+                "createdAt": "2022-12-12T15:52:58.484Z",
+                "updatedAt": "2022-12-12T15:52:58.484Z"
             }
         ],
         "instanceKeys": [
@@ -272,7 +136,15 @@
         "createdAt": "2022-02-11T00:01:10.504Z",
         "updatedAt": "2022-02-11T00:01:10.504Z",
         "MaintenanceImpacts": [],
-        "MaintenanceEvents": [],
+        "MaintenanceEvents": [
+            {
+                "id": 154273,
+                "type": "scheduled",
+                "message": "This maintenance is scheduled.",
+                "createdAt": "2022-12-11T00:01:20.041Z",
+                "updatedAt": "2022-12-11T00:01:20.041Z"
+            }
+        ],
         "instanceKeys": [
             "EU48"
         ],
@@ -297,7 +169,15 @@
         "createdAt": "2022-10-31T09:14:04.370Z",
         "updatedAt": "2022-10-31T09:14:04.370Z",
         "MaintenanceImpacts": [],
-        "MaintenanceEvents": [],
+        "MaintenanceEvents": [
+            {
+                "id": 154497,
+                "type": "scheduled",
+                "message": "This maintenance is scheduled.",
+                "createdAt": "2022-12-11T00:01:42.018Z",
+                "updatedAt": "2022-12-11T00:01:42.018Z"
+            }
+        ],
         "instanceKeys": [
             "EU48"
         ],
@@ -322,7 +202,15 @@
         "createdAt": "2022-10-31T09:17:58.488Z",
         "updatedAt": "2022-10-31T09:17:58.488Z",
         "MaintenanceImpacts": [],
-        "MaintenanceEvents": [],
+        "MaintenanceEvents": [
+            {
+                "id": 154374,
+                "type": "scheduled",
+                "message": "This maintenance is scheduled.",
+                "createdAt": "2022-12-11T00:01:36.228Z",
+                "updatedAt": "2022-12-11T00:01:36.228Z"
+            }
+        ],
         "instanceKeys": [
             "EU48"
         ],
@@ -346,6 +234,31 @@
         "affectsAll": false,
         "createdAt": "2022-07-12T21:36:59.982Z",
         "updatedAt": "2022-07-12T21:36:59.982Z",
+        "MaintenanceImpacts": [],
+        "MaintenanceEvents": [],
+        "instanceKeys": [
+            "EU48"
+        ],
+        "serviceKeys": [
+            "coreService"
+        ]
+    },
+    {
+        "id": 621396,
+        "message": {
+            "maintenanceType": "release",
+            "availability": "unavailable",
+            "eventStatus": "confirmed"
+        },
+        "externalId": "a3GEE0000007Y1p2AE",
+        "name": "Winter '24 Major Release",
+        "plannedStartTime": "2023-10-13T23:00:00.000Z",
+        "plannedEndTime": "2023-10-13T23:05:00.000Z",
+        "additionalInformation": null,
+        "isCore": true,
+        "affectsAll": false,
+        "createdAt": "2022-12-08T22:00:19.694Z",
+        "updatedAt": "2022-12-08T22:00:19.694Z",
         "MaintenanceImpacts": [],
         "MaintenanceEvents": [],
         "instanceKeys": [

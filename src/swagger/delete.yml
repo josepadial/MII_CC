@@ -1,0 +1,24 @@
+tags:
+  - Eliminar un elemeto de la base de datos
+parameters:
+  - name: tipo
+    required: True
+    in: path
+    type: string
+    enum: ['Incidencias', 'Cambios']
+    default: Incidencias
+  - name: id
+    required: true
+    in: path
+    type: integer
+definitions:
+  Eliminar un elemeto de la base de datos:
+    type: string
+    description: Borrar una incidencia o cambio de la BBDD
+responses:
+  200:
+    description: Success
+    schema:
+      properties:
+        Delete:
+          type: string

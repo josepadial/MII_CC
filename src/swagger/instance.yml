@@ -1,0 +1,13 @@
+tags:
+  - Obtener instancia del cliente
+definitions:
+  Obtener instancia del cliente:
+    type: string
+    description: El cliente posee varias instancias de sus sistemas. Nosotros estamos analizando una en concreto. Esta consulta nos da la versión de la instancia que se analiza de la API.
+responses:
+  200:
+    description: Success
+    schema:
+      properties:
+        Instancia:
+          type: string

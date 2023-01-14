@@ -1,0 +1,25 @@
+tags:
+  - Eliminar el contenido de una tabla de la base de datos
+parameters:
+  - name: tipo
+    required: True
+    in: path
+    type: string
+    enum: ['Incidencias', 'Cambios']
+    default: Incidencias
+  - name: confirmacion
+    required: true
+    in: path
+    enum: ['No', 'Si']
+    default: No
+definitions:
+  Eliminar el contenido de una tabla de la base de datos:
+    type: string
+    description: Borrar todas las incidencias o cambios de la BBDD
+responses:
+  200:
+    description: Success
+    schema:
+      properties:
+        Delete all:
+          type: string

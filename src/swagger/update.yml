@@ -1,0 +1,20 @@
+tags:
+  - Sincronizar el contenido
+parameters:
+  - name: tipo
+    required: True
+    in: path
+    type: string
+    enum: ['Incidencias', 'Cambios']
+    default: Incidencias
+definitions:
+  Sincronizar el contenido:
+    type: string
+    description: Actualzia desde la API la información de la BBDD y de Json. Cuadno se actualiza la BBDD tambien se envia un correo
+responses:
+  200:
+    description: Success
+    schema:
+      properties:
+        Update:
+          type: string

@@ -1,0 +1,51 @@
+tags:
+  - Obtner un cambio por su ID
+parameters:
+  - name: id_ch
+    required: true
+    in: path
+    type: integer
+definitions:
+  Obtner un cambio por su ID:
+    type: string
+    description: Con el ID de un cambio obtenemos todos los datos que hay en la base de datos
+responses:
+  200:
+    description: Success
+    schema:
+      properties:
+        Maintenance:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+              externalId:
+                type: integer
+              message:
+                type: string
+              additionalInformation:
+                type: string
+              name_ch:
+                type: string
+              plannedStartTime:
+                type: string
+              plannedEndTime:
+                type: string
+              isCore:
+                type: boolean
+              affectsAll:
+                type: boolean
+              createdAt:
+                type: string
+              updatedAt:
+                type: string
+              MaintenanceImpacts:
+                type: string
+              MaintenanceEvents:
+                type: string
+              instanceKeys:
+                type: string
+              serviceKeys:
+                type: string
