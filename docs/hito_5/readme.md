@@ -1,17 +1,20 @@
 # Hito 5: Diseño y test de un microservicio
 Índice:
 <!-- TOC -->
-* [Hito 5: Diseño y test de un microservicio](#hito-5--diseño-y-test-de-un-microservicio)
-  * [Elección framework microservicio](#elección-framework-microservicio)
-  * [El porque de elegir Swagger](#el-porque-de-elegir-swagger)
-    * [Modele API con precisión](#modele-api-con-precisión)
-    * [Visualiza mientras diseñas](#visualiza-mientras-diseñas)
-    * [Estandarice sus estilos de diseño en todos los equipos](#estandarice-sus-estilos-de-diseño-en-todos-los-equipos)
-  * [Swagger + Python + Flask](#swagger--python--flask)
-    * [¿Qué es Flask Python?](#qué-es-flask-python)
-    * [Requisitos técnicos](#requisitos-técnicos)
-    * [Proceso de instalación](#proceso-de-instalación)
-    * [API REST con estructura CRUD](#api-rest-con-estructura-crud)
+* [Elección framework microservicio](#elección-framework-microservicio)
+* [El porque de elegir Swagger](#el-porque-de-elegir-swagger)
+  * [Modele API con precisión](#modele-api-con-precisión)
+  * [Visualiza mientras diseñas](#visualiza-mientras-diseñas)
+  * [Estandarice sus estilos de diseño en todos los equipos](#estandarice-sus-estilos-de-diseño-en-todos-los-equipos)
+* [Swagger + Python + Flask](#swagger--python--flask)
+  * [¿Qué es Flask Python?](#qué-es-flask-python)
+  * [¿Qué es Flasgger?](#qué-es-flasgger)
+  * [Requisitos técnicos](#requisitos-técnicos)
+  * [Proceso de instalación](#proceso-de-instalación)
+  * [Funcionalidades de Swagger implementadas](#funcionalidades-de-swagger-implementadas)
+  * [Acceso a Swagger](#acceso-a-swagger)
+* [Logs](#logs)
+  * [Niveles de registros](#niveles-de-registros)
 <!-- TOC -->
 
 ## Elección framework microservicio
@@ -81,3 +84,35 @@ Después de eso, solo necesita ejecutar el siguiente comando:
 ```bash
 pip install -r requirements.txt
 ```
+
+### Funcionalidades de Swagger implementadas
+![](../img/swagger.png)
+
+### Acceso a Swagger
+```bash
+http://localhost:8082/swagger/
+```
+
+## Logs
+Para los logs se ha utilizado el módulo logging de Python, el cual nos permite hacer una gestión de los logs.
+Para ver los logs se puede consultar el fichero logging.conf desde la terminal o desde la interfaz web de Swagger.
+
+Este módulo define funciones y clases que implementan un evento flexible Sistema de registro para aplicaciones y bibliotecas.
+
+La ventaja clave de tener la API de registro proporcionada por un módulo de biblioteca estándar es que todos los módulos 
+de Python pueden participar en el registro, por lo que su registro de aplicación puede incluir sus propios mensajes 
+integrados con mensajes de terceros Módulos.
+
+### Niveles de registros
+Los valores numéricos de los niveles de registro se indican en la tabla siguiente. Estos son: principalmente de interés 
+si desea definir sus propios niveles y los necesita para tienen valores específicos relativos a los niveles predefinidos. 
+Si define un nivel con el mismo valor numérico, sobrescribe el valor predefinido; el predefinido El nombre se ha perdido.
+
+| Nivel    | Valor numérico |
+|----------|----------------|
+| CRITICAL | 50             |
+| ERROR    | 40             |
+| WARNING  | 30             |
+| INFO     | 20             |
+| DEBUG    | 10             |
+| NOTSET   | 0              |

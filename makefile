@@ -2,8 +2,8 @@ VENV = /venv-cc
 PYTHON = $(VENV)/bin/python3.8
 PIP = $(VENV)/bin/pip
 
-run: $(VENV)/bin/activate
-	$(PYTHON) ./src/main.py
+run:
+	docker-compose up -d
 
 tests: $(VENV)/bin/activate
 	$(PYTHON) -m pytest
