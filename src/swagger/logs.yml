@@ -1,0 +1,13 @@
+tags:
+  - Obtener los logs de la aplicación
+definitions:
+  Obtener los logs de la aplicación:
+    type: string
+    description: Ver los logs de la aplicación
+responses:
+  200:
+    description: Success
+    schema:
+      properties:
+        Logs:
+          type: string

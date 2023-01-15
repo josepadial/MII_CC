@@ -1,0 +1,74 @@
+tags:
+  - Añadir un cambio a la base de datos manualmente
+parameters:
+  - name: id_ch
+    required: true
+    in: path
+    type: integer
+  - name: externalId
+    required: true
+    in: path
+    type: integer
+  - name: message
+    required: true
+    in: path
+    type: string
+  - name: additionalInformation
+    required: true
+    in: path
+    type: string
+  - name: name_ch
+    required: true
+    in: path
+    type: string
+  - name: plannedStartTime
+    required: true
+    in: path
+    type: string
+  - name: plannedEndTime
+    required: true
+    in: path
+    type: string
+  - name: isCore
+    required: true
+    in: path
+    type: boolean
+  - name: affectsAll
+    required: true
+    in: path
+    type: boolean
+  - name: createdAt
+    required: true
+    in: path
+    type: string
+  - name: updatedAt
+    required: true
+    in: path
+    type: string
+  - name: MaintenanceImpacts
+    required: true
+    in: path
+    type: string
+  - name: MaintenanceEvents
+    required: true
+    in: path
+    type: string
+  - name: instanceKeys
+    required: true
+    in: path
+    type: string
+  - name: serviceKeys
+    required: true
+    in: path
+    type: string
+definitions:
+  Añadir una incidencia a la base de datos manualmente:
+    type: string
+    description: Añadimos un cambio a la base de datos de forma manual
+responses:
+  200:
+    description: Success
+    schema:
+      properties:
+        Maintenance:
+          type: string

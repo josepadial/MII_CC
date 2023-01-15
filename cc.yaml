@@ -6,3 +6,5 @@ test:
   - test/tests.py
 fichero_tareas:
   - Makefile
+make:
+  - make

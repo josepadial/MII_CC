@@ -1,0 +1,13 @@
+tags:
+  - Test base de datos
+definitions:
+  Test base de datos:
+    type: string
+    description: Realiza un test para comprobar si la API tiene conexceión con la base de datos.
+responses:
+  200:
+    description: Success
+    schema:
+      properties:
+        Estado de la base de datos:
+          type: string

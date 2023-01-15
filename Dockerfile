@@ -23,4 +23,4 @@ RUN export $(cat envfile.env | xargs)
 COPY . .
 COPY makefile makefile
 
-CMD [ "make", "tests"]
+CMD [ "/venv-cc/bin/python3.8", "src/main.py"]

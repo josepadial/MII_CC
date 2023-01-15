@@ -27,12 +27,11 @@ class DatabaseManager:
         self.cursor = None
         self.filepath = "../data/"
         self.email = EmailManager()
-
         self.connect()
 
     def connect(self):
         try:
-            self.connection = pymysql.connect(host=os.getenv('HOST_DB', 'localhost'), user=os.getenv('USER_DB', 'root'),
+            self.connection = pymysql.connect(host=os.getenv('HOST_DB', '10.5.0.5'), user=os.getenv('USER_DB', 'root'),
                                               passwd=os.getenv('PASSWORD_DB', '1234'), database="ALERT-ME")
             self.cursor = self.connection.cursor()
         except pymysql.OperationalError as e:
@@ -111,8 +110,22 @@ class DatabaseManager:
                                         f"{affects_all}, '{created_at}', '{updated_at}',"
                                         f"'{incident_impacts}', '{incident_events}', '{instance_keys}', '{service_keys}')")
             self.connection.commit()
+            return f"Se ha actualizado correctamente la BBDD de incidencias"
         except pymysql.OperationalError as e:
-            print(e)
+            return f"Se ha producido el siguiente fallo {e}"
+
+    def add_incident_post(self, id_inc, external_id, message, additional_information, is_core, affects_all, created_at, updated_at, incident_impacts, incident_events, instance_keys, service_keys):
+        try:
+            self.cursor.execute(f"INSERT INTO incidencias (id, externalId, message, additionalInformation,"
+                                f"isCore, affectsAll, createdAt, updatedAt, IncidentImpacts,"
+                                f"IncidentEvents, instanceKeys, serviceKeys) VALUES ('{id_inc}', '{external_id}', "
+                                f"'{message}', '{additional_information}', {is_core},"
+                                f"{affects_all}, '{created_at}', '{updated_at}',"
+                                f"'{incident_impacts}', '{incident_events}', '{instance_keys}', '{service_keys}')")
+            self.connection.commit()
+            return f"Se ha añadido correctamente la incidencia a la BBDD"
+        except pymysql.OperationalError as e:
+            return f"Se ha producido el siguiente fallo {e}"
 
     def add_cambios(self):
         try:
@@ -181,5 +194,105 @@ class DatabaseManager:
                                         f"'{created_at}', '{updated_at}', '{maintenance_impacts}', '{maintenance_events}',"
                                         f"'{instance_keys}', '{service_keys}')")
             self.connection.commit()
+            return f"Se ha actualizado correctamente la BBDD de cambios"
         except pymysql.OperationalError as e:
             print(e)
+
+    def add_maintenance_post(self, id_ch, external_id, message, additional_information, name, planned_start_time, planned_end_time, is_core, affects_all, created_at, updated_at, maintenance_impacts, maintenance_events, instance_keys, service_keys):
+        try:
+            self.cursor.execute(f"INSERT INTO cambios (id, message, externalId, name_ch, plannedStartTime,"
+                                f"plannedEndTime, additionalInformation, isCore, affectsAll, createdAt,"
+                                f"updatedAt, MaintenanceImpacts, MaintenanceEvents, instanceKeys, serviceKeys)"
+                                f"VALUES ('{id_ch}', '{message}', '{external_id}', '{name}', '{planned_start_time}',"
+                                f"'{planned_end_time}', '{additional_information}', {is_core}, {affects_all},"
+                                f"'{created_at}', '{updated_at}', '{maintenance_impacts}', '{maintenance_events}',"
+                                f"'{instance_keys}', '{service_keys}')")
+            self.connection.commit()
+            return f"Se ha añadido correctamente cambio a la BBDD"
+        except pymysql.OperationalError as e:
+            return f"Se ha producido el siguiente fallo {e}"
+    def search_incident_id(self, id_inc):
+        try:
+            sql_statement = f"SELECT * FROM incidencias WHERE id='{id_inc}'"
+            self.cursor.execute(sql_statement)
+            result = self.cursor.fetchall()
+            if len(result) == 1:
+                return result[0]
+            else:
+                return "Ese ID no se encuentra"
+        except pymysql.OperationalError as e:
+            return f"Se ha producido el siguiente fallo {e}"
+
+    def delete_incident_id(self, id_inc):
+        try:
+            sql_statement = f"DELETE FROM incidencias WHERE id='{id_inc}'"
+            self.cursor.execute(sql_statement)
+            self.connection.commit()
+            return "Se ha borrado correctamente la incidencia"
+        except pymysql.OperationalError as e:
+            return f"Se ha producido el siguiente fallo {e}"
+
+    def delete_all_incident_id(self):
+        try:
+            sql_statement = f"DELETE FROM incidencias"
+            self.cursor.execute(sql_statement)
+            self.connection.commit()
+            return "Se ha borrado correctamente las incidencias"
+        except pymysql.OperationalError as e:
+            return f"Se ha producido el siguiente fallo {e}"
+
+    def get_ids_incidents(self):
+        try:
+            sql_statement = "SELECT id FROM incidencias"
+            self.cursor.execute(sql_statement)
+            primary_keys = self.cursor.fetchall()
+            primary_keys = [item for t in primary_keys for item in t]
+            if len(primary_keys) >= 1:
+                return primary_keys
+            else:
+                return ["No se encuentran"]
+        except pymysql.OperationalError as e:
+            return [f"Se ha producido el siguiente fallo {e}"]
+
+    def search_maintenance_id(self, id_ch):
+        try:
+            sql_statement = f"SELECT * FROM cambios WHERE id='{id_ch}'"
+            self.cursor.execute(sql_statement)
+            result = self.cursor.fetchall()
+            if len(result) == 1:
+                return result[0]
+            else:
+                return "Ese ID no se encuentra"
+        except pymysql.OperationalError as e:
+            return f"Se ha producido el siguiente fallo {e}"
+
+    def delete_maintenances_id(self, id_ch):
+        try:
+            sql_statement = f"DELETE FROM cambios WHERE id='{id_ch}'"
+            self.cursor.execute(sql_statement)
+            self.connection.commit()
+            return "Se ha borrado correctamente el cambio"
+        except pymysql.OperationalError as e:
+            return f"Se ha producido el siguiente fallo {e}"
+
+    def delete_all_maintenances_id(self):
+        try:
+            sql_statement = f"DELETE FROM cambios"
+            self.cursor.execute(sql_statement)
+            self.connection.commit()
+            return "Se ha borrado correctamente los cambios"
+        except pymysql.OperationalError as e:
+            return f"Se ha producido el siguiente fallo {e}"
+
+    def get_ids_maintenances(self):
+        try:
+            sql_statement = "SELECT id FROM cambios"
+            self.cursor.execute(sql_statement)
+            primary_keys = self.cursor.fetchall()
+            primary_keys = [item for t in primary_keys for item in t]
+            if len(primary_keys) >= 1:
+                return primary_keys
+            else:
+                return ["No se encuentran"]
+        except pymysql.OperationalError as e:
+            return [f"Se ha producido el siguiente fallo {e}"]

@@ -30,7 +30,7 @@ class EmailManager:
         self.connect()
 
     def connect(self):
-        self.smtp = smtplib.SMTP("localhost", 25)
+        self.smtp = smtplib.SMTP("10.5.0.7", 1025)
 
     def make_message(self, data, incidencias=False):
         if incidencias:

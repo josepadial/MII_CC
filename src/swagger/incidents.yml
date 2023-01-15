@@ -1,0 +1,45 @@
+tags:
+  - Obtner una incidencia por su ID
+parameters:
+  - name: id_inc
+    required: true
+    in: path
+    type: integer
+definitions:
+  Obtner una incidencia por su ID:
+    type: string
+    description: Con el ID de una incidencia obtenemos todos los datos que hay en la base de datos
+responses:
+  200:
+    description: Success
+    schema:
+      properties:
+        Incident:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+              externalId:
+                type: integer
+              message:
+                type: string
+              additionalInformation:
+                type: string
+              isCore:
+                type: boolean
+              affecteAll:
+                type: boolean
+              createdAt:
+                type: string
+              updatedAt:
+                type: string
+              IncidentImpacts:
+                type: string
+              IncidentEvents:
+                type: string
+              instanceKeys:
+                type: string
+              serviceKeys:
+                type: string
