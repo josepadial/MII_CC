@@ -8,3 +8,5 @@ fichero_tareas:
   - Makefile
 make:
   - make
+test-docker-compose:
+  - make
