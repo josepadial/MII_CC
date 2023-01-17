@@ -60,4 +60,4 @@ Enlace a toda la documentación sobre integración continua [Información de int
 Enlace a toda la documentación sobre microservicio [Información de microservicio](docs/hito_5/readme.md)
 
 # Docker Compose
-Enlace a toda la documentación sobre Docker Compose [Información de microservicio](docs/hito_6/readme.md)
+Enlace a toda la documentación sobre Docker Compose [Información de Docker Compose](docs/hito_6/readme.md)
